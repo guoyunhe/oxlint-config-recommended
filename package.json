@@ -5,13 +5,17 @@
   "keywords": [
     "code-style",
     "eslint",
+    "eslint-plugin-unicorn",
+    "eslint-recommended",
     "lint",
     "linting",
     "oxlint",
     "oxlint-config",
     "recommended",
     "shared-config",
-    "typescript"
+    "typescript",
+    "typescript-eslint",
+    "unicorn"
   ],
   "homepage": "https://github.com/guoyunhe/oxlint-config-recommended#readme",
   "bugs": {

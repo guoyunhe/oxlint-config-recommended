@@ -2,33 +2,49 @@
 
 A recommended shareable configuration for [Oxlint](https://oxc.rs/docs/guide/usage/linter.html).
 
+It enables Oxlint's `correctness` category as errors and `suspicious` category
+as warnings, while covering every ESLint built-in `recommended` rule supported
+by Oxlint at error level.
+
 ## Installation
 
 ```bash
 pnpm add --save-dev oxlint-config-recommended oxlint
 ```
 
-## Usage
+## Configuration formats
 
-Add the configuration to `oxlint.json` in your project root:
+### JSON or JSONC
 
-```json
+Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` in your project root:
+
+```jsonc
 {
   "extends": ["oxlint-config-recommended"]
 }
 ```
 
+### `oxlint.config.ts`
+
+Import this package's config object and extend it directly:
+
+```ts
+import { defineConfig } from 'oxlint';
+import recommended from 'oxlint-config-recommended';
+
+export default defineConfig({
+  extends: [recommended],
+});
+```
+
+JavaScript and TypeScript config files (including `oxlint.config.js`) are
+experimental in Oxlint and require running Oxlint through Node.js.
+
 ## ESLint compatibility
 
-This configuration is compatible with ESLint's built-in `recommended` rule
-set: all supported rules from that set are enabled at error level. These
-explicit severities take precedence over Oxlint's category levels, so an
-ESLint recommended rule remains an error even if its Oxlint category is set to
-warnings. Oxlint does not currently implement `no-dupe-args` or `no-octal`, so
-those rules are omitted.
-
-The configuration also reports Oxlint correctness issues as errors and warns
-about suspicious code.
+ESLint recommended rules remain errors even when their Oxlint category is set
+to warnings. Oxlint does not currently implement `no-dupe-args` or `no-octal`,
+so those rules are omitted.
 
 ## License
 

@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Compatibility with ESLint's built-in `recommended` rule set for all rules
-  supported by Oxlint. Unsupported `no-dupe-args` and `no-octal` are omitted.
-- Overrides all `eslint-plugin-unicorn` recommended rules supported by Oxlint
-  to error severity.
-- Completes `typescript-eslint` recommended coverage for rules supported by
-  Oxlint.
+- Adds recommended-rule coverage for all rules supported by Oxlint from
+  ESLint's built-in `recommended` set. Unsupported `no-dupe-args` and
+  `no-octal` are omitted.
+- Adds recommended-rule coverage for all rules supported by Oxlint from
+  `eslint-plugin-unicorn`'s `recommended` config.
+- Adds recommended-rule coverage for all rules supported by Oxlint from
+  `typescript-eslint`'s `recommended` config.

@@ -5,7 +5,7 @@ A recommended shareable configuration for [Oxlint](https://oxc.rs/docs/guide/usa
 It enables Oxlint's `correctness` category as errors and `suspicious` category
 as warnings, while covering Oxlint-supported rules from ESLint's built-in
 `recommended` set, `eslint-plugin-unicorn`'s `recommended` config, and
-`typescript-eslint`'s `recommended` config at error level.
+`typescript-eslint`'s `recommended` config.
 
 ## Installation
 

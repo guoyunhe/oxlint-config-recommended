@@ -13,9 +13,11 @@ as warnings, while covering Oxlint-supported rules from ESLint's built-in
 pnpm add --save-dev oxlint-config-recommended oxlint
 ```
 
-## Configuration formats
+## Configuration
 
-### JSON or JSONC
+### Basic
+
+#### JSON or JSONC
 
 Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` in your project root:
 
@@ -25,7 +27,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` in your project root:
 }
 ```
 
-### `oxlint.config.ts`
+#### JavaScript/TypeScript
 
 Import this package's config object and extend it directly:
 
@@ -43,6 +45,8 @@ experimental in Oxlint and require running Oxlint through Node.js.
 
 ### React and JSX
 
+#### JSON or JSONC
+
 Extend the React and JSX accessibility recommended rules with
 `oxlint-config-recommended/react`:
 
@@ -58,6 +62,20 @@ Extend the React and JSX accessibility recommended rules with
 This enables the supported recommended rules from `eslint-plugin-react` and
 `eslint-plugin-jsx-a11y`. The React config intentionally includes only those
 plugin rules that Oxlint supports.
+
+#### JavaScript/TypeScript
+
+Import both config objects and extend them together:
+
+```ts
+import { defineConfig } from 'oxlint';
+import recommended from 'oxlint-config-recommended';
+import recommendedReact from 'oxlint-config-recommended/react';
+
+export default defineConfig({
+  extends: [recommended, recommendedReact],
+});
+```
 
 ## Recommended rule compatibility
 

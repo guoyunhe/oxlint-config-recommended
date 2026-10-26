@@ -41,6 +41,24 @@ export default defineConfig({
 JavaScript and TypeScript config files (including `oxlint.config.js`) are
 experimental in Oxlint and require running Oxlint through Node.js.
 
+### React and JSX
+
+Extend the React and JSX accessibility recommended rules with
+`oxlint-config-recommended/react`:
+
+```jsonc
+{
+  "extends": [
+    "oxlint-config-recommended",
+    "oxlint-config-recommended/react"
+  ]
+}
+```
+
+This enables the supported recommended rules from `eslint-plugin-react` and
+`eslint-plugin-jsx-a11y`. The React config intentionally includes only those
+plugin rules that Oxlint supports.
+
 ## Recommended rule compatibility
 
 The supported ESLint, Unicorn, and TypeScript recommended rules remain errors

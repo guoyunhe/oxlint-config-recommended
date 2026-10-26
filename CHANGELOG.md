@@ -13,3 +13,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   supported by Oxlint. Unsupported `no-dupe-args` and `no-octal` are omitted.
 - Overrides all `eslint-plugin-unicorn` recommended rules supported by Oxlint
   to error severity.
+- Completes `typescript-eslint` recommended coverage for rules supported by
+  Oxlint.

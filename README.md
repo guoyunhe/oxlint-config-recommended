@@ -3,9 +3,9 @@
 A recommended shareable configuration for [Oxlint](https://oxc.rs/docs/guide/usage/linter.html).
 
 It enables Oxlint's `correctness` category as errors and `suspicious` category
-as warnings, while covering every Oxlint-supported rule from ESLint's built-in
-`recommended` set and `eslint-plugin-unicorn`'s `recommended` config at error
-level.
+as warnings, while covering Oxlint-supported rules from ESLint's built-in
+`recommended` set, `eslint-plugin-unicorn`'s `recommended` config, and
+`typescript-eslint`'s `recommended` config at error level.
 
 ## Installation
 
@@ -43,9 +43,9 @@ experimental in Oxlint and require running Oxlint through Node.js.
 
 ## Recommended rule compatibility
 
-The supported ESLint and Unicorn recommended rules remain errors even when
-their Oxlint category is set to warnings. Oxlint does not currently implement
-ESLint's `no-dupe-args` or `no-octal`, so those rules are omitted.
+The supported ESLint, Unicorn, and TypeScript recommended rules remain errors
+even when their Oxlint category is set to warnings. Oxlint does not currently
+implement ESLint's `no-dupe-args` or `no-octal`, so those rules are omitted.
 
 ## License
 

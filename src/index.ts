@@ -1,7 +1,7 @@
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
-  plugins: ['eslint', 'unicorn'],
+  plugins: ['eslint', 'unicorn', 'typescript'],
   categories: {
     correctness: 'error',
     suspicious: 'warn',
@@ -20,6 +20,15 @@ export default defineConfig({
     'no-unexpected-multiline': 'error',
     'no-useless-assignment': 'error',
     'preserve-caught-error': 'error',
+
+    // typescript-eslint recommended rules overrides
+    'typescript/ban-ts-comment': 'error',
+    'typescript/no-empty-object-type': 'error',
+    'typescript/no-explicit-any': 'error',
+    'typescript/no-namespace': 'error',
+    'typescript/no-require-imports': 'error',
+    'typescript/no-unnecessary-type-constraint': 'error',
+    'typescript/no-unsafe-function-type': 'error',
 
     // unicorn recommended rules overrides
     'unicorn/catch-error-name': 'error',

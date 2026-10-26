@@ -12,7 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Adds `oxlint-config-recommended/react` with Oxlint-supported recommended rules
-  from `eslint-plugin-react` and `eslint-plugin-jsx-a11y`.
+  from `eslint-plugin-react`.
+- Adds `oxlint-config-recommended/jsx-a11y` with Oxlint-supported recommended
+  rules from `eslint-plugin-jsx-a11y`.
 
 ## [1.0.0] - 2026-10-26
 

@@ -43,25 +43,19 @@ export default defineConfig({
 JavaScript and TypeScript config files (including `oxlint.config.js`) are
 experimental in Oxlint and require running Oxlint through Node.js.
 
-### React and JSX
+### React
 
 #### JSON or JSONC
 
-Extend the React and JSX accessibility recommended rules with
-`oxlint-config-recommended/react`:
+Extend the React recommended rules with `oxlint-config-recommended/react`:
 
 ```jsonc
 {
-  "extends": [
-    "oxlint-config-recommended",
-    "oxlint-config-recommended/react"
-  ]
+  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/react"]
 }
 ```
 
-This enables the supported recommended rules from `eslint-plugin-react` and
-`eslint-plugin-jsx-a11y`. The React config intentionally includes only those
-plugin rules that Oxlint supports.
+This enables the supported recommended rules from `eslint-plugin-react`.
 
 #### JavaScript/TypeScript
 
@@ -74,6 +68,35 @@ import recommendedReact from 'oxlint-config-recommended/react';
 
 export default defineConfig({
   extends: [recommended, recommendedReact],
+});
+```
+
+### JSX accessibility
+
+#### JSON or JSONC
+
+Extend the JSX accessibility recommended rules with
+`oxlint-config-recommended/jsx-a11y`:
+
+```jsonc
+{
+  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/jsx-a11y"]
+}
+```
+
+This enables the supported recommended rules from `eslint-plugin-jsx-a11y`.
+
+#### JavaScript/TypeScript
+
+Import the configs and extend them together:
+
+```ts
+import { defineConfig } from 'oxlint';
+import recommended from 'oxlint-config-recommended';
+import recommendedJsxA11y from 'oxlint-config-recommended/jsx-a11y';
+
+export default defineConfig({
+  extends: [recommended, recommendedJsxA11y],
 });
 ```
 

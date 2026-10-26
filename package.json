@@ -49,6 +49,10 @@
     "./react": {
       "types": "./dist/react.d.ts",
       "import": "./dist/react.js"
+    },
+    "./jsx-a11y": {
+      "types": "./dist/jsx-a11y.d.ts",
+      "import": "./dist/jsx-a11y.js"
     }
   },
   "scripts": {

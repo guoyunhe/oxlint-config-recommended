@@ -1,0 +1,58 @@
+{
+  "name": "oxlint-config-recommended",
+  "version": "1.0.0",
+  "description": "Recommended shareable config for Oxlint",
+  "keywords": [
+    "code-style",
+    "eslint",
+    "lint",
+    "linting",
+    "oxlint",
+    "oxlint-config",
+    "recommended",
+    "shared-config",
+    "typescript"
+  ],
+  "homepage": "https://github.com/guoyunhe/oxlint-config-recommended#readme",
+  "bugs": {
+    "url": "https://github.com/guoyunhe/oxlint-config-recommended/issues"
+  },
+  "license": "MPL-2.0",
+  "author": {
+    "name": "Guo Yunhe",
+    "email": "i@guoyunhe.me",
+    "url": "https://guoyunhe.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guoyunhe/oxlint-config-recommended.git"
+  },
+  "funding": "https://github.com/sponsors/guoyunhe",
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "oxlint src",
+    "lint:fix": "oxlint --fix src"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.89.0"
+  },
+  "devDependencies": {
+    "oxlint": "^1.89.0",
+    "typescript": "^5.9.3"
+  }
+}

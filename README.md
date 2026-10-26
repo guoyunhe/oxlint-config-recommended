@@ -3,8 +3,9 @@
 A recommended shareable configuration for [Oxlint](https://oxc.rs/docs/guide/usage/linter.html).
 
 It enables Oxlint's `correctness` category as errors and `suspicious` category
-as warnings, while covering every ESLint built-in `recommended` rule supported
-by Oxlint at error level.
+as warnings, while covering every Oxlint-supported rule from ESLint's built-in
+`recommended` set and `eslint-plugin-unicorn`'s `recommended` config at error
+level.
 
 ## Installation
 
@@ -40,11 +41,11 @@ export default defineConfig({
 JavaScript and TypeScript config files (including `oxlint.config.js`) are
 experimental in Oxlint and require running Oxlint through Node.js.
 
-## ESLint compatibility
+## Recommended rule compatibility
 
-ESLint recommended rules remain errors even when their Oxlint category is set
-to warnings. Oxlint does not currently implement `no-dupe-args` or `no-octal`,
-so those rules are omitted.
+The supported ESLint and Unicorn recommended rules remain errors even when
+their Oxlint category is set to warnings. Oxlint does not currently implement
+ESLint's `no-dupe-args` or `no-octal`, so those rules are omitted.
 
 ## License
 

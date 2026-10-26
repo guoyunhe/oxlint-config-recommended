@@ -11,3 +11,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Compatibility with ESLint's built-in `recommended` rule set for all rules
   supported by Oxlint. Unsupported `no-dupe-args` and `no-octal` are omitted.
+- Overrides all `eslint-plugin-unicorn` recommended rules supported by Oxlint
+  to error severity.

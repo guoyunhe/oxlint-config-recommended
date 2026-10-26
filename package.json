@@ -45,14 +45,17 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "oxlint src",
-    "lint:fix": "oxlint --fix src"
+    "lint": "oxlint src test",
+    "lint:fix": "oxlint --fix src test",
+    "test": "vitest run"
   },
   "peerDependencies": {
     "oxlint": ">=1.89.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.5",
     "oxlint": "^1.89.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
   }
 }

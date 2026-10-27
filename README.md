@@ -1,5 +1,8 @@
 # oxlint-config-recommended
 
+[![npm downloads](https://badgen.net/npm/dm/oxlint-config-recommended)](https://www.npmjs.com/package/oxlint-config-recommended)
+[![GitHub stars](https://badgen.net/github/stars/guoyunhe/oxlint-config-recommended)](https://github.com/guoyunhe/oxlint-config-recommended)
+
 A recommended shareable configuration for [Oxlint](https://oxc.rs/docs/guide/usage/linter.html).
 
 It enables Oxlint's `correctness` category as errors and `suspicious` category

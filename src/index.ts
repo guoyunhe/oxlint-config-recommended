@@ -1,4 +1,5 @@
 import { defineConfig } from 'oxlint';
+
 import unicornConfig from './unicorn.js';
 
 export default defineConfig({
@@ -31,6 +32,5 @@ export default defineConfig({
     'typescript/no-require-imports': 'error',
     'typescript/no-unnecessary-type-constraint': 'error',
     'typescript/no-unsafe-function-type': 'error',
-
   },
 });

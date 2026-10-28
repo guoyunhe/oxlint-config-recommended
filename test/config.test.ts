@@ -1,7 +1,9 @@
 import { spawnSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
 import { expect, it } from 'vitest';
+
 import config from '../src/index.ts';
 import jsxA11yConfig from '../src/jsx-a11y.ts';
 import reactConfig from '../src/react.ts';

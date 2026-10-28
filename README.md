@@ -26,7 +26,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the base config:
 
 ```jsonc
 {
-  "extends": ["oxlint-config-recommended"]
+  "extends": ["oxlint-config-recommended"],
 }
 ```
 
@@ -55,7 +55,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the React config:
 
 ```jsonc
 {
-  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/react"]
+  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/react"],
 }
 ```
 
@@ -85,7 +85,7 @@ accessibility config:
 
 ```jsonc
 {
-  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/jsx-a11y"]
+  "extends": ["oxlint-config-recommended", "oxlint-config-recommended/jsx-a11y"],
 }
 ```
 
@@ -115,7 +115,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the Unicorn config:
 
 ```jsonc
 {
-  "extends": ["oxlint-config-recommended/unicorn"]
+  "extends": ["oxlint-config-recommended/unicorn"],
 }
 ```
 

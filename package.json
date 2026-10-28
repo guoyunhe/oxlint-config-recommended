@@ -53,6 +53,10 @@
     "./jsx-a11y": {
       "types": "./dist/jsx-a11y.d.ts",
       "import": "./dist/jsx-a11y.js"
+    },
+    "./unicorn": {
+      "types": "./dist/unicorn.d.ts",
+      "import": "./dist/unicorn.js"
     }
   },
   "scripts": {

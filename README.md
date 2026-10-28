@@ -103,6 +103,28 @@ export default defineConfig({
 });
 ```
 
+### Unicorn
+
+The base configuration includes the recommended Unicorn rules. To use these
+rules separately, extend `oxlint-config-recommended/unicorn`:
+
+```jsonc
+{
+  "extends": ["oxlint-config-recommended/unicorn"]
+}
+```
+
+Or import the config object in a JavaScript/TypeScript config file:
+
+```ts
+import { defineConfig } from 'oxlint';
+import recommendedUnicorn from 'oxlint-config-recommended/unicorn';
+
+export default defineConfig({
+  extends: [recommendedUnicorn],
+});
+```
+
 ## Recommended rule compatibility
 
 The supported ESLint, Unicorn, and TypeScript recommended rules remain errors

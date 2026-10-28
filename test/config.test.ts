@@ -5,6 +5,7 @@ import { expect, it } from 'vitest';
 import config from '../src/index.ts';
 import jsxA11yConfig from '../src/jsx-a11y.ts';
 import reactConfig from '../src/react.ts';
+import unicornConfig from '../src/unicorn.ts';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const categoryOptions: Record<string, string> = {
@@ -96,10 +97,26 @@ it('enables JSX accessibility recommended rules', () => {
   });
 });
 
+it('enables Unicorn recommended rules', () => {
+  expect(unicornConfig.plugins).toEqual(['unicorn']);
+  expect(unicornConfig.categories).toEqual({
+    correctness: 'error',
+    suspicious: 'warn',
+  });
+  expect(unicornConfig.rules).toMatchObject({
+    'unicorn/catch-error-name': 'error',
+    'unicorn/prefer-array-find': 'error',
+  });
+});
+
 it('does not repeat React category settings in rules at the same severity', () => {
   expect(getDuplicatedCategoryRules(reactConfig, ['--react-plugin'])).toEqual([]);
 });
 
 it('does not repeat JSX accessibility category settings in rules at the same severity', () => {
   expect(getDuplicatedCategoryRules(jsxA11yConfig, ['--jsx-a11y-plugin'])).toEqual([]);
+});
+
+it('does not repeat Unicorn category settings in rules at the same severity', () => {
+  expect(getDuplicatedCategoryRules(unicornConfig, [])).toEqual([]);
 });

@@ -20,9 +20,9 @@ pnpm add --save-dev oxlint-config-recommended oxlint
 
 ### Basic
 
-#### JSON or JSONC
+**JSON or JSONC**
 
-Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` in your project root:
+Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the base config:
 
 ```jsonc
 {
@@ -30,9 +30,10 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` in your project root:
 }
 ```
 
-#### JavaScript/TypeScript
+**JavaScript/TypeScript**
 
-Import this package's config object and extend it directly:
+In `oxlint.config.ts` (or `oxlint.config.js`), import the base config and add
+it to the `extends` array:
 
 ```ts
 import { defineConfig } from 'oxlint';
@@ -48,9 +49,9 @@ experimental in Oxlint and require running Oxlint through Node.js.
 
 ### React
 
-#### JSON or JSONC
+**JSON or JSONC**
 
-Extend the React recommended rules with `oxlint-config-recommended/react`:
+Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the React config:
 
 ```jsonc
 {
@@ -60,9 +61,10 @@ Extend the React recommended rules with `oxlint-config-recommended/react`:
 
 This enables the supported recommended rules from `eslint-plugin-react`.
 
-#### JavaScript/TypeScript
+**JavaScript/TypeScript**
 
-Import both config objects and extend them together:
+In `oxlint.config.ts` (or `oxlint.config.js`), import the base and React
+configs and add them to the `extends` array:
 
 ```ts
 import { defineConfig } from 'oxlint';
@@ -76,10 +78,10 @@ export default defineConfig({
 
 ### JSX accessibility
 
-#### JSON or JSONC
+**JSON or JSONC**
 
-Extend the JSX accessibility recommended rules with
-`oxlint-config-recommended/jsx-a11y`:
+Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the JSX
+accessibility config:
 
 ```jsonc
 {
@@ -89,9 +91,10 @@ Extend the JSX accessibility recommended rules with
 
 This enables the supported recommended rules from `eslint-plugin-jsx-a11y`.
 
-#### JavaScript/TypeScript
+**JavaScript/TypeScript**
 
-Import the configs and extend them together:
+In `oxlint.config.ts` (or `oxlint.config.js`), import the base and JSX
+accessibility configs and add them to the `extends` array:
 
 ```ts
 import { defineConfig } from 'oxlint';
@@ -106,7 +109,9 @@ export default defineConfig({
 ### Unicorn
 
 The base configuration includes the recommended Unicorn rules. To use these
-rules separately, extend `oxlint-config-recommended/unicorn`:
+rules separately:
+
+Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the Unicorn config:
 
 ```jsonc
 {
@@ -114,7 +119,8 @@ rules separately, extend `oxlint-config-recommended/unicorn`:
 }
 ```
 
-Or import the config object in a JavaScript/TypeScript config file:
+Or in `oxlint.config.ts` (or `oxlint.config.js`), import the Unicorn config and
+add it to the `extends` array:
 
 ```ts
 import { defineConfig } from 'oxlint';

@@ -60,6 +60,9 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the React config:
 ```
 
 This enables the supported recommended rules from `eslint-plugin-react`.
+It disables `react/react-in-jsx-scope` for the automatic JSX runtime used by
+React 17 and later. Oxlint does not implement `react/jsx-uses-react`, the other
+rule disabled by ESLint's `plugin:react/jsx-runtime` preset.
 
 **JavaScript/TypeScript**
 

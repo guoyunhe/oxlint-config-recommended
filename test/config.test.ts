@@ -1,5 +1,5 @@
 import { spawnSync } from 'node:child_process';
-import { dirname, resolve } from 'node:path';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { expect, it } from 'vitest';
@@ -9,7 +9,7 @@ import jsxA11yConfig from '../src/jsx-a11y.ts';
 import reactConfig from '../src/react.ts';
 import unicornConfig from '../src/unicorn.ts';
 
-const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const categoryOptions: Record<string, string> = {
   allow: '-A',
   error: '-D',
@@ -73,6 +73,7 @@ it('enables React recommended rules', () => {
   expect(reactConfig.rules).toMatchObject({
     'react/display-name': 'error',
     'react/jsx-no-comment-textnodes': 'error',
+    'react/react-in-jsx-scope': 'off',
   });
   expect(Object.keys(reactConfig.rules ?? {}).some((rule) => rule.startsWith('jsx-a11y/'))).toBe(
     false,

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-10-29
+
+### Fixed
+
+- Disables `react/react-in-jsx-scope` in the React config for projects using the
+  automatic JSX runtime.
+
 ## [1.2.0] - 2026-10-28
 
 ### Added

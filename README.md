@@ -27,6 +27,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the base config:
 ```jsonc
 {
   "extends": ["oxlint-config-recommended"],
+  "env": { "builtin": true, "browser": true, "node": true, "vitest": true },
 }
 ```
 
@@ -41,6 +42,7 @@ import recommended from 'oxlint-config-recommended';
 
 export default defineConfig({
   extends: [recommended],
+  env: { builtin: true, browser: true, node: true, vitest: true },
 });
 ```
 
@@ -56,6 +58,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the React config:
 ```jsonc
 {
   "extends": ["oxlint-config-recommended", "oxlint-config-recommended/react"],
+  "env": { "builtin": true, "browser": true, "node": true, "vitest": true },
 }
 ```
 
@@ -76,6 +79,7 @@ import recommendedReact from 'oxlint-config-recommended/react';
 
 export default defineConfig({
   extends: [recommended, recommendedReact],
+  env: { builtin: true, browser: true, node: true, vitest: true },
 });
 ```
 
@@ -89,6 +93,7 @@ accessibility config:
 ```jsonc
 {
   "extends": ["oxlint-config-recommended", "oxlint-config-recommended/jsx-a11y"],
+  "env": { "builtin": true, "browser": true, "node": true, "vitest": true },
 }
 ```
 
@@ -106,6 +111,7 @@ import recommendedJsxA11y from 'oxlint-config-recommended/jsx-a11y';
 
 export default defineConfig({
   extends: [recommended, recommendedJsxA11y],
+  env: { builtin: true, browser: true, node: true, vitest: true },
 });
 ```
 
@@ -119,6 +125,7 @@ Add this to `.oxlintrc.json` or `.oxlintrc.jsonc` to enable the Unicorn config:
 ```jsonc
 {
   "extends": ["oxlint-config-recommended/unicorn"],
+  "env": { "builtin": true, "browser": true, "node": true, "vitest": true },
 }
 ```
 
@@ -131,6 +138,7 @@ import recommendedUnicorn from 'oxlint-config-recommended/unicorn';
 
 export default defineConfig({
   extends: [recommendedUnicorn],
+  env: { builtin: true, browser: true, node: true, vitest: true },
 });
 ```
 

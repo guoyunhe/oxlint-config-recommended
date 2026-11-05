@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-05
+
+### Changed
+
+- Removes the Unicorn configuration from the base config. Use
+  `oxlint-config-recommended/unicorn` to enable the Unicorn rules.
+
 ## [1.2.1] - 2026-10-29
 
 ### Fixed

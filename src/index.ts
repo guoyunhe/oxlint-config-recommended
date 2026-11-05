@@ -1,9 +1,6 @@
 import { defineConfig } from 'oxlint';
 
-import unicornConfig from './unicorn.js';
-
 export default defineConfig({
-  extends: [unicornConfig],
   plugins: ['eslint', 'typescript'],
   categories: {
     correctness: 'error',
